@@ -1,0 +1,12 @@
+.dash {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.dash-title {
+  margin: 0;
+  font-size: 2rem;
+}

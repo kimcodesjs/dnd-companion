@@ -1,0 +1,26 @@
+.back-button {
+  position: fixed;
+  top: 1.25rem;
+  left: 1.25rem;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  padding: 0.4rem;
+  cursor: pointer;
+  color: #ffffff;
+  transition: background-color 150ms ease, transform 100ms ease;
+}
+
+.back-button:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  transform: translateX(-2px);
+}
+
+.back-button:active {
+  background-color: rgba(255, 255, 255, 0.04);
+  transform: translateX(0);
+}

@@ -1,0 +1,30 @@
+.landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.landing-get-started {
+  margin-top: 1.5rem;
+  padding: 0.65rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #7b2d8b;
+  color: #ffffff;
+  transition: background-color 150ms ease, transform 100ms ease;
+}
+
+.landing-get-started:hover {
+  background-color: #9b3dab;
+  transform: translateY(-2px);
+}
+
+.landing-get-started:active {
+  background-color: #5a1f6a;
+  transform: translateY(0);
+}
