@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./DnDNewsPanel.css";
 
-const SOURCES = ["All", "EN World", "Gnome Stew", "The Angry GM", "Tribality", "r/DnD"];
+const SOURCES = [
+  "All",
+  "EN World",
+  "Gnome Stew",
+  "The Angry GM",
+  "Tribality",
+  "r/DnD",
+];
 
 const DnDNewsPanel = () => {
   const [articles, setArticles] = useState([]);
@@ -43,7 +50,7 @@ const DnDNewsPanel = () => {
   return (
     <div className="dnd-news-panel">
       <div className="dnd-news-panel-header">
-        <h2 className="dnd-news-panel-title">DnD News</h2>
+        <h2 className="dnd-news-panel-title">D&D News</h2>
       </div>
 
       <div className="dnd-news-panel-tabs">
@@ -59,9 +66,7 @@ const DnDNewsPanel = () => {
       </div>
 
       <div className="dnd-news-panel-content">
-        {loading && (
-          <p className="dnd-news-panel-status">Loading news...</p>
-        )}
+        {loading && <p className="dnd-news-panel-status">Loading news...</p>}
 
         {error && (
           <p className="dnd-news-panel-status dnd-news-panel-status--error">
@@ -73,23 +78,27 @@ const DnDNewsPanel = () => {
           <p className="dnd-news-panel-status">No articles found.</p>
         )}
 
-        {!loading && !error && filteredArticles.map((article, index) => (
-          <a
-            key={index}
-            className="dnd-news-card"
-            href={article.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="dnd-news-card-body">
-              <span className="dnd-news-card-source">{article.source}</span>
-              <p className="dnd-news-card-title">{article.title}</p>
-            </div>
-            {article.date && (
-              <span className="dnd-news-card-date">{formatDate(article.date)}</span>
-            )}
-          </a>
-        ))}
+        {!loading &&
+          !error &&
+          filteredArticles.map((article, index) => (
+            <a
+              key={index}
+              className="dnd-news-card"
+              href={article.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="dnd-news-card-body">
+                <span className="dnd-news-card-source">{article.source}</span>
+                <p className="dnd-news-card-title">{article.title}</p>
+              </div>
+              {article.date && (
+                <span className="dnd-news-card-date">
+                  {formatDate(article.date)}
+                </span>
+              )}
+            </a>
+          ))}
       </div>
     </div>
   );
