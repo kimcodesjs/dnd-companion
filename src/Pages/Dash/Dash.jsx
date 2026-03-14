@@ -1,10 +1,11 @@
 import React from "react";
+import CampaignPanel from "./CampaignPanel";
 import "./Dash.css";
 
-const Dash = () => {
+const Dash = ({ isGuest = true }) => {
   return (
     <div className="dash">
-      <h1 className="dash-title">Dashboard</h1>
+<CampaignPanel isGuest={isGuest} />
     </div>
   );
 };

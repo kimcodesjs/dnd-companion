@@ -1,0 +1,148 @@
+.campaign-panel {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.6)
+  );
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+/* ── Guest overlay ─────────────────────────────────────── */
+
+.campaign-panel-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease;
+  z-index: 10;
+}
+
+.campaign-panel--guest:hover .campaign-panel-overlay {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.campaign-panel-overlay-message {
+  margin: 0;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+}
+
+.campaign-panel-overlay-btn {
+  padding: 0.55rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #7b2d8b;
+  color: #ffffff;
+  transition: background-color 150ms ease, transform 100ms ease;
+}
+
+.campaign-panel-overlay-btn:hover {
+  background-color: #9b3dab;
+  transform: translateY(-2px);
+}
+
+.campaign-panel-overlay-btn:active {
+  background-color: #5a1f6a;
+  transform: translateY(0);
+}
+
+/* ── Header ────────────────────────────────────────────── */
+
+.campaign-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.campaign-panel-title {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.campaign-panel-add {
+  padding: 0.45rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 150ms ease, transform 100ms ease;
+}
+
+.campaign-panel-add:not(:disabled):hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+.campaign-panel-add:not(:disabled):active {
+  background-color: rgba(255, 255, 255, 0.04);
+  transform: translateY(0);
+}
+
+.campaign-panel-add:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* ── Cards ─────────────────────────────────────────────── */
+
+.campaign-panel-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.campaign-panel-empty {
+  margin: 0;
+  opacity: 0.45;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.campaign-card {
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  transition: background-color 150ms ease;
+}
+
+.campaign-card:hover {
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.campaign-card-title {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+.campaign-card-subtitle {
+  margin: 0;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
