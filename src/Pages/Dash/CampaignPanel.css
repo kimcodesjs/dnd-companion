@@ -2,6 +2,11 @@
   position: relative;
   width: 100%;
   max-width: 720px;
+  box-sizing: border-box;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   background: linear-gradient(
@@ -114,6 +119,9 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
 }
 
 .campaign-panel-empty {
@@ -145,4 +153,42 @@
   margin: 0;
   font-size: 0.85rem;
   opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .campaign-panel {
+    padding: 1.25rem;
+    border-radius: 10px;
+  }
+
+  .campaign-panel-title {
+    font-size: 1.1rem;
+  }
+
+  .campaign-panel-add {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .campaign-panel {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .campaign-panel-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .campaign-panel-add {
+    width: 100%;
+    text-align: center;
+  }
+
+  .campaign-card {
+    padding: 0.75rem 1rem;
+  }
 }
