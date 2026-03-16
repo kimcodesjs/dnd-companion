@@ -5,17 +5,21 @@ const BackIcon = ({ size = 24, color = "currentColor", className = "" }) => (
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke={color}
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
+    viewBox="0 0 7 7"
+    fill={color}
     className={className}
     aria-label="Go back"
     role="img"
+    shapeRendering="crispEdges"
   >
-    <polyline points="15 18 9 12 15 6" />
+    {/* Left-pointing pixel chevron on a 7x7 grid (1px = 1 "pixel") */}
+    <rect x="4" y="0" width="1" height="1" />
+    <rect x="3" y="1" width="1" height="1" />
+    <rect x="2" y="2" width="1" height="1" />
+    <rect x="1" y="3" width="1" height="1" />
+    <rect x="2" y="4" width="1" height="1" />
+    <rect x="3" y="5" width="1" height="1" />
+    <rect x="4" y="6" width="1" height="1" />
   </svg>
 );
 

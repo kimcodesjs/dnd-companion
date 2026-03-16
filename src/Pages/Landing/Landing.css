@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  height: 100vh;
 }
 
 .landing-get-started {

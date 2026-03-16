@@ -140,3 +140,6 @@ export const getTrait = (index) => get(`/traits/${index}`);
 // e.g. ammunition, finesse, heavy, light, loading, reach, thrown, two-handed, versatile
 export const getWeaponProperties = () => get("/weapon-properties");
 export const getWeaponProperty = (index) => get(`/weapon-properties/${index}`);
+
+// ── Generic detail fetcher ──────────────────────────────────────────────────
+export const getResourceDetail = (resourceKey, index) => get(`/${resourceKey}/${index}`);
